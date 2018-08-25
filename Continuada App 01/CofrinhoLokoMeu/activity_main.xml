@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imagemPorco"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/cofrinholokomeu" />
+
+    <TextView
+        android:id="@+id/h1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/imagemPorco"
+        android:text="Cofrinho Loko Meu"
+        android:textColor="#00f"
+        android:textSize="35sp"
+        android:textAlignment="center"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/input01"
+        android:layout_marginLeft="10dp"
+        android:paddingRight="150dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/h1"
+        android:hint="Qual a sua meta?"
+        android:inputType="numberDecimal"/>
+
+    <EditText
+        android:id="@+id/input02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/input01"
+        app:layout_constraintLeft_toLeftOf="@id/input01"
+        android:hint="Valor de um depósito"
+        android:inputType="numberDecimal"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/input02"
+        app:layout_constraintLeft_toRightOf="@id/input02"
+        android:text="Depositar"
+        android:onClick="handleClick"/>
+
+    <TextView
+        android:id="@+id/textResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/input02"
+        android:layout_marginTop="30dp"
+        android:text=""
+        android:textStyle="bold"
+        android:textSize="25sp"/>
+
+    <TextView
+        android:id="@+id/textResultDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        app:layout_constraintTop_toBottomOf="@id/textResult"
+        android:textStyle="italic"
+        android:textColor="#f00"
+        android:textSize="25sp"/>
+
+</android.support.constraint.ConstraintLayout>
